@@ -11,6 +11,8 @@ import SwiftUI
 // MARK: Constants used throuhgout app
 enum Constants {
     static let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    static let appBuild = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+    static let appVersionBuildString = "\(Constants.appVersion!) (\(Constants.appBuild!))"
     
     static let leagueInfoLeaguePlayerCountMinimumValue = 1
     static let leagueInfoLeaguePlayerCountMaximumValue = 200
@@ -23,7 +25,7 @@ enum Constants {
 enum SettingsConstants {
     static let settingsAboutHelpContactEmailAddress = "mpappshelp@icloud.com"
     static let settingsAboutHelpContactSubjectLine = "Pigskin Picks Feedback"
-    static let settingsAboutHelpContactBody = "\n\nBuild: \(Constants.appVersion!)"
+    static let settingsAboutHelpContactBody = "\n\nBuild: \(Constants.appVersionBuildString)"
     
     static let settingsAboutHelpPrivacyPolicyURL = "https://www.termsfeed.com/live/c573af58-fe93-410c-b0c4-53117e44ab9c"
     static let settingsAboutAcknowledgementsDeveloperGitHubURL = "https://github.com/PSLPeters"

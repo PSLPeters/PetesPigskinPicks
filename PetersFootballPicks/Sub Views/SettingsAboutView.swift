@@ -22,7 +22,7 @@ struct SettingsAboutView: View {
             List {
                 Section("App Information") {
                     LabeledContent("Version") {
-                        Text(Constants.appVersion!)
+                        Text(Constants.appVersionBuildString)
                     }
                 }
                 Section("Help") {

@@ -87,7 +87,14 @@ struct SettingsView: View {
                         SettingsAccentsView()
                         .navigationTitle("Accent Color")
                     } label: {
-                        Text("Accent Color")
+                        HStack {
+                            Text("Accent Color")
+                            Spacer()
+                            RoundedRectangle(cornerRadius: 50)
+                                .frame(width: 30, height: 15)
+                                .padding(.trailing)
+                                .foregroundStyle(arrAppTints[selectedAppTintIndex].color)
+                        }
                     }
                     Picker("Include in Title", selection: $selectedTitleItem) {
                         ForEach(arrTitleItems.indices, id:\.self) { index in
